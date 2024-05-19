@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web-Mobile</title>
+    <link rel="stylesheet" href="estilo/style.css">
+    <link rel="stylesheet" href="estilo/loginmidias.css">
+    <link rel="shortcut icon" href="imagens/LOGOTIPO-branco.png" type="image/x-icon"> <!--Icone do link-->
+</head>
+<body>
+    <header>
+        <main>
+            <div id="topo">
+                <div id="informacoes">
+                    <img src="imagens/LOGOTIPO.png" alt="">
+                    <h4 id="um">&#8226; COMO CHEGAR?</h4>
+                    <h4>&#8226; FALE CONOSCO</h4>
+                </div>
+            </div>
+            <div id="imagem">
+        
+            </div>
+            <div id="opcoes">
+                <h1>Clinica Mente-Sã</h1>
+                <i id="select" onclick="clickMenu()"><div class="hamburger closet ">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div></i>
+                <menu id="itens">
+                    <ul>
+                        <li><a href="#">Quem somos?</a></li>
+                        <li><a href="#">unidade</a></li>
+                        <li><a href="#">Convênios</a></li>
+                        <li><a href="#">Especialidades</a></li>
+                    </ul>
+                </menu>
+            </div>
+
+            <div id="slogan"><h1>Sua saúde em 1° lugar</h1></div>
+
+            <div id="agendamento">
+                <div id="um">Agende já seu horário</div>
+                <div id="dois"><img src="imagens/calendario.png" alt=""></div>
+            </div>
+
+            <div id="agendamento2">
+                <input type="name" name="cadastroNome" id="cadastroNome" class="inputAgenda" placeholder="    Digite aqui seu nome" autocomplete="name" required maxlength="30">
+            </div>
+
+            <div id="agendamento3">
+                <input type="E-mail" name="cadastroEmail" id="cadastroEmail" class="inputAgenda" placeholder="    Digite aqui seu E-mail" autocomplete="E-mail" required maxlength="30">
+            </div>
+
+            <div id="agendamento4">
+                <div id="um">Agendar</div>
+            </div>
+
+            <div id="agendamento5">
+                <div id="um">Dirceu I: 3235 7788</div>
+                <div id="tres"><img src="imagens/telefone.png" alt=""></div>
+            </div>
+
+        </main>
+    </header>
+    <script>
+        function clickMenu(){
+            if (itens.style.display == 'block') {
+                itens.style.display = 'none'
+            } else {
+                itens.style.display= 'block'
+            }
+        }
+        (function clickMenu () {
+            const menu = document.querySelector('.hamburger');
+
+            menu.onclick = () => {
+                menu.classList.toggle('open');
+            }
+        })();
+    </script>
+</body>
+</html>
