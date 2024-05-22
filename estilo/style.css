@@ -22,9 +22,9 @@ div#informacoes > img {
 div#informacoes > h4 {
     margin-right: 2%;
     color: black;
-    font-size: 2vw;
+    font-size: 2.3vw;
     margin-top: 15px;
-    margin-left: 4%;
+    
 }
 
 div#informacoes > h4#um {
@@ -117,11 +117,10 @@ div#agendamento{
     border: 0px solid black;
     display: flex;
     justify-content: center; 
-    align-items: center;   
+    align-items: center;
 }
 
 div#agendamento > div#um{
-    font-size: 5vh;
     border: 2px solid #148C54;
     height: 60px;
     width: 257px;
@@ -131,6 +130,11 @@ div#agendamento > div#um{
     background-color: #148C54;
     color: white;
     border-radius: 4px 0px 0px 4px;
+}
+
+div#um > h2{
+    margin: 20px;
+    font-size: 4.3vh;
 }
 
 div#dois > img {
@@ -223,6 +227,94 @@ div#tres > img {
 }
 
 /*-----------------------------------------------------------------*/
+
+.specialties-container {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.specialties-button {
+    background-color: #148c54bb;
+    color: rgb(0, 0, 0);
+    padding: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    text-align: center;
+    line-height: 1;
+    width: 20px;
+    position: relative;
+    border-radius: 0px 5px 5px 0px;
+
+}
+
+.specialties-button .arrow {
+    position: absolute;
+    right: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+}
+
+.specialties-options {
+    display: none;
+    margin-left: 10px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 250px;
+    background-color: #ffffff;
+    border: 0px solid #333;
+    border-radius: 5px;
+
+}
+
+
+.specialty-box {
+    width: 20%;
+    height: 200px;
+    background-color: #148C54;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 8px;
+    border-radius: 5px;
+    text-align: left;
+    font-size: 2.9vh;
+    position: relative;
+
+}
+
+.specialty-box > h3{
+    margin-bottom: 12px;
+    text-decoration: underline;
+    font-size: 3.2vh;
+    text-align: center;
+}
+
+.option-image {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
+.specialty-placeholder {
+    display: none; /* Oculta por padrão */
+    justify-content: center;
+    align-items: center;
+    height: 100px; /* Ajuste a altura conforme necessário */
+    background-image: linear-gradient(to right, #24ae87, white);
+    border: 0px solid #333;
+    flex-grow: 1;
+    margin-left: 10px; 
+    color: #166952;
+    font-size: 6vh;
+    border-radius: 10px;
+}
+
+/*----------------------------------------*/
 
 .hamburger{
     width: 50px;
