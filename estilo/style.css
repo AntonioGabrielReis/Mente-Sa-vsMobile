@@ -313,7 +313,7 @@ div#tres > img {
     }
     
     .specialty-box {
-        width: 45%; /* Ajusta a largura para caber duas em uma linha */
+        width: 35%; /* Ajusta a largura para caber duas em uma linha */
         margin: 10px; /* Adiciona espaço entre as opções */
         height: auto; /* Ajusta a altura automaticamente */
     }
