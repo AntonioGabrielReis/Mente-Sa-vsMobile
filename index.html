@@ -18,8 +18,7 @@
                     <h4>&#8226; FALE CONOSCO</h4>
                 </div>
             </div>
-            <div id="imagem">
-            </div>
+            <div id="imagem"></div>
             <div id="opcoes">
                 <h1>Clinica Mente Sã</h1>
                 <i id="select" onclick="clickMenu()"><div class="hamburger closet">
@@ -72,29 +71,28 @@
                     <div class="specialty-box">
                         <h3>Psicologia</h3>
                         <p>Psicologia estuda como as pessoas pensam, sentem e se comportam, visando melhorar o bem-estar e a qualidade de vida.</p>
-                        <img src="imagens/LOGOTIPO-branco.png" alt="Psicologia" class="option-image">
+                        <img src="imagens/LOGOTIPO-branco.png" alt="Opção 3" class="option-image">
                     </div>
                     <div class="specialty-box">
                         <h3>Fisioterapia</h3>
                         <p>Fisioterapia visa restaurar a funcionalidade física, melhorar a qualidade de vida e prevenir lesões e a orientação sobre hábitos saudáveis.</p>
-                        <img src="imagens/LOGOTIPO-branco.png" alt="Fisioterapia" class="option-image">
+                        <img src="imagens/LOGOTIPO-branco.png" alt="Opção 3" class="option-image">
                     </div>
                     <div class="specialty-box">
                         <h3>Fonoaudiologia</h3>
                         <p>Fonoaudiologia visa promover comunicação eficaz e melhorar a qualidade de vida de pessoas com dificuldades nessa área.</p>
-                        <img src="imagens/LOGOTIPO-branco.png" alt="Fonoaudiologia" class="option-image">
+                        <img src="imagens/LOGOTIPO-branco.png" alt="Opção 3" class="option-image">
                     </div>
                     <div class="specialty-box">
                         <h3>Psicopedagogia</h3>
                         <p>Psicopedagogia busca entender em dificuldades de aprendizagem, integrando Psicologia e Pedagogia para promover o sucesso educacional e pessoal.</p>
-                        <img src="imagens/LOGOTIPO-branco.png" alt="Psicopedagogia" class="option-image">
+                        <img src="imagens/LOGOTIPO-branco.png" alt="Opção 3" class="option-image">
                     </div>
                 </div>
                 <div class="specialty-placeholder" id="specialty-placeholder">
-                    <h2>Sua saúde em 1° lugar</h2>
-                </div>                
+                    <h2>Sua saúde em primeiro lugar</h2>
+                </div>
             </div>
-            
         </main>
     </header>
     <script>
@@ -122,8 +120,6 @@
                 arrow.innerHTML = '&#9660;'; // Down arrow
             }
         }
-        
-        
 
         (function clickMenu () {
             const menu = document.querySelector('.hamburger');
@@ -131,6 +127,11 @@
                 menu.classList.toggle('open');
             }
         })();
+
+        window.onload = function() {
+            const placeholder = document.getElementById('specialty-placeholder');
+            placeholder.style.display = 'flex'; // Exibe a frase ao inicializar a página
+        };
     </script>
 </body>
 </html>

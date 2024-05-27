@@ -103,8 +103,6 @@ menu > ul > li > a:hover{
 
 /*Primeira parte*/
 
-
-
 div#slogan > h1{
     margin-top: 20px;
     text-align: center;
@@ -151,9 +149,7 @@ div#agendamento2{
     display: inline-block;
     display: flex;
     margin-top: 10px;
-
 }
-
 
 div#agendamento3{
     align-items: center;   
@@ -173,7 +169,6 @@ div#agendamento3{
     background-color: rgb(195, 195, 195);
 }
 
-
 div#agendamento4{
     align-items: center;   
     justify-content: center; 
@@ -181,7 +176,6 @@ div#agendamento4{
     display: flex;
     margin-top: 10px;
     border-radius: 4px;
-    
 }
 
 div#agendamento4 > div#um{
@@ -194,7 +188,6 @@ div#agendamento4 > div#um{
     justify-content: center; /* Centraliza horizontalmente */
     align-items: center;    /* Centraliza verticalmente */
     border-radius: 4px;
-
 }
 
 div#agendamento5{
@@ -245,7 +238,6 @@ div#tres > img {
     width: 20px;
     position: relative;
     border-radius: 0px 5px 5px 0px;
-
 }
 
 .specialties-button .arrow {
@@ -267,9 +259,7 @@ div#tres > img {
     background-color: #ffffff;
     border: 0px solid #333;
     border-radius: 5px;
-
 }
-
 
 .specialty-box {
     width: 20%;
@@ -282,7 +272,6 @@ div#tres > img {
     text-align: left;
     font-size: 2.9vh;
     position: relative;
-
 }
 
 .specialty-box > h3{
@@ -314,39 +303,18 @@ div#tres > img {
     border-radius: 10px;
 }
 
-/*----------------------------------------*/
+/* Media Queries para telas menores */
 
-.hamburger{
-    width: 50px;
-    height: 25px;
-    position: relative;
-    margin: 10px auto;
-    transition: .5s ease-in-out;
-    cursor: pointer;
+@media screen and (max-width: 768px) {
+    .specialties-options {
+        flex-wrap: wrap;
+        height: auto;
+        justify-content: space-around;
+    }
     
-}
-
-.hamburger span{
-    display: block;
-    position: absolute;
-    height: 7px;
-    width: 90%;
-    background: white;
-    border-radius: 9px;
-    opacity: 1;
-    left: 0;
-    transform: rotate(0deg);
-    transition: .25s ease-in-out;
-}
-
-.hamburger span:nth-child(1){
-    top: 0px;
-}
-
-.hamburger span:nth-child(2), .hamburger span:nth-child(3){
-    top: 10px;
-}
-
-.hamburger span:nth-child(4){
-    top: 20px;
+    .specialty-box {
+        width: 45%; /* Ajusta a largura para caber duas em uma linha */
+        margin: 10px; /* Adiciona espaço entre as opções */
+        height: auto; /* Ajusta a altura automaticamente */
+    }
 }
