@@ -253,31 +253,33 @@ div#tres > img {
     margin-left: 10px;
     flex-grow: 1;
     display: flex;
+    flex-wrap: wrap; /* Adicionado para permitir quebra de linha */
     justify-content: space-around;
     align-items: center;
-    height: 250px;
     background-color: #ffffff;
     border: 0px solid #333;
     border-radius: 5px;
 }
 
 .specialty-box {
-    width: 20%;
-    height: 200px;
+    flex: 1 1 calc(50% - 20px); /* Ajusta a largura para 50% menos margem */
+    max-width: calc(50% - 20px); /* Garante que a largura máxima seja de 50% menos margem */
+    height: auto;
     background-color: #148C54;
     color: rgb(255, 255, 255);
     text-align: center;
     padding: 8px;
     border-radius: 5px;
-    text-align: left;
-    font-size: 2.9vh;
+    font-size: 2.5vh;
+    margin: 10px; /* Espaçamento entre as caixas */
+    box-sizing: border-box; /* Garante que o padding não aumente a largura total */
     position: relative;
 }
 
 .specialty-box > h3{
-    margin-bottom: 12px;
+    margin-bottom: 8px;
     text-decoration: underline;
-    font-size: 3.2vh;
+    font-size: 2.8vh;
     text-align: center;
 }
 
@@ -304,17 +306,21 @@ div#tres > img {
 }
 
 /* Media Queries para telas menores */
-
 @media screen and (max-width: 768px) {
-    .specialties-options {
-        flex-wrap: wrap;
-        height: auto;
-        justify-content: space-around;
-    }
-    
     .specialty-box {
-        width: 35%; /* Ajusta a largura para caber duas em uma linha */
-        margin: 10px; /* Adiciona espaço entre as opções */
-        height: auto; /* Ajusta a altura automaticamente */
+        flex: 1 1 calc(50% - 10px); /* Ajusta a largura para 50% menos margem */
+        max-width: calc(50% - 10px); /* Garante que a largura máxima seja de 50% menos margem */
+        font-size: 2vh; /* Ajusta o tamanho da fonte */
+    }
+
+    .specialty-box > h3 {
+        font-size: 2.2vh; /* Ajusta o tamanho da fonte do título */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .specialty-box {
+        flex: 1 1 calc(100% - 20px); /* Ajusta a largura para 100% menos margem */
+        max-width: calc(100% - 20px); /* Garante que a largura máxima seja de 100% menos margem */
     }
 }
