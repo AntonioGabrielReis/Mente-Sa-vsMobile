@@ -279,7 +279,6 @@ div#tres > img {
     display: none;
     margin-left: 10px;
     flex-grow: 1;
-    display: flex;
     flex-wrap: wrap; /* Adicionado para permitir quebra de linha */
     justify-content: space-around;
     align-items: center;
@@ -319,7 +318,7 @@ div#tres > img {
 }
 
 .specialty-placeholder {
-    display: none; /* Oculta por padrão */
+    display: flex; /* Oculta por padrão */
     justify-content: center;
     align-items: center;
     height: 100px; /* Ajuste a altura conforme necessário */
@@ -331,9 +330,7 @@ div#tres > img {
     font-size: 6vh;
     border-radius: 10px;
 
-    margin-top: 20px;
-    text-align: center;
-    background-color: #166952cd;
+  
 }
 
 /* Media Queries para telas menores */
