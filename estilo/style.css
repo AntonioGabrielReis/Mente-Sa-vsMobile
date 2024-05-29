@@ -248,38 +248,12 @@ div#tres > img {
 
 /*-----------------------------------------------------------------*/
 
-.specialties-container {
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.specialties-button {
-    background-color: #148c54bb;
-    color: rgb(0, 0, 0);
-    padding: 5px;
-    cursor: pointer;
-    font-size: 12px;
-    text-align: center;
-    line-height: 1;
-    width: 20px;
-    position: relative;
-    border-radius: 0px 5px 5px 0px;
-}
-
-.specialties-button .arrow {
-    position: absolute;
-    right: -15px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 16px;
-}
-
+/* Mostramos as opções de especialidades por padrão */
 .specialties-options {
-    display: none;
+    display: flex;
     margin-left: 10px;
     flex-grow: 1;
-    flex-wrap: wrap; /* Adicionado para permitir quebra de linha */
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     background-color: #ffffff;
@@ -288,8 +262,8 @@ div#tres > img {
 }
 
 .specialty-box {
-    flex: 1 1 calc(50% - 20px); /* Ajusta a largura para 50% menos margem */
-    max-width: calc(50% - 20px); /* Garante que a largura máxima seja de 50% menos margem */
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
     height: auto;
     background-color: #148C54;
     color: rgb(255, 255, 255);
@@ -297,8 +271,8 @@ div#tres > img {
     padding: 8px;
     border-radius: 5px;
     font-size: 2.5vh;
-    margin: 10px; /* Espaçamento entre as caixas */
-    box-sizing: border-box; /* Garante que o padding não aumente a largura total */
+    margin: 10px;
+    box-sizing: border-box;
     position: relative;
 }
 
@@ -318,37 +292,25 @@ div#tres > img {
 }
 
 .specialty-placeholder {
-    display: flex; /* Oculta por padrão */
-    justify-content: center;
-    align-items: center;
-    height: 100px; /* Ajuste a altura conforme necessário */
-    background-image: linear-gradient(to right, #24ae87, white);
-    border: 0px solid #333;
-    flex-grow: 1;
-    margin-left: 10px; 
-    color: #166952;
-    font-size: 6vh;
-    border-radius: 10px;
-
-  
+    display: none; /* Placeholder não é mais necessário */
 }
 
 /* Media Queries para telas menores */
 @media screen and (max-width: 768px) {
     .specialty-box {
-        flex: 1 1 calc(50% - 10px); /* Ajusta a largura para 50% menos margem */
-        max-width: calc(50% - 10px); /* Garante que a largura máxima seja de 50% menos margem */
-        font-size: 2vh; /* Ajusta o tamanho da fonte */
+        flex: 1 1 calc(50% - 10px);
+        max-width: calc(50% - 10px);
+        font-size: 2vh;
     }
 
     .specialty-box > h3 {
-        font-size: 2.2vh; /* Ajusta o tamanho da fonte do título */
+        font-size: 2.2vh;
     }
 }
 
 @media screen and (max-width: 480px) {
     .specialty-box {
-        flex: 1 1 calc(100% - 20px); /* Ajusta a largura para 100% menos margem */
-        max-width: calc(100% - 20px); /* Garante que a largura máxima seja de 100% menos margem */
+        flex: 1 1 calc(100% - 20px);
+        max-width: calc(100% - 20px);
     }
 }
