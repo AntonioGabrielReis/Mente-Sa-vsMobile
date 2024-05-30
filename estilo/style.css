@@ -264,7 +264,7 @@ div#tres > img {
 .specialty-box {
     flex: 1 1 calc(50% - 20px);
     max-width: calc(50% - 20px);
-    height: 80px;
+    height: 150px;
     background-color: #148C54;
     color: rgb(255, 255, 255);
     text-align: center;
@@ -300,7 +300,7 @@ div#tres > img {
     .specialty-box {
         flex: 1 1 calc(50% - 40px);
         max-width: calc(50% - 40px);
-        height: 80px;
+        height: 150px;
         font-size: 2vh;
     }
 
@@ -312,7 +312,7 @@ div#tres > img {
 @media screen and (max-width: 480px) {
     .specialty-box {
         flex: 1 1 calc(100% - 40px);
-        height: 80px;
+        height: 150px;
         max-width: calc(100% - 40px);
     }
 }
