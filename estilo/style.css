@@ -231,7 +231,7 @@ div#agendamento5{
 }
 
 div#agendamento5 > div#um{
-    font-size: 3.2vh;
+    font-size: 3.0vh;
     border: 2px solid #148C54;
     height: 50px;
     width: 263px;
@@ -241,6 +241,7 @@ div#agendamento5 > div#um{
     background-color: #148C54;
     color: white;
     border-radius: 4px 0px 0px 4px;
+    
 }
 
 div#agendamento5 > div#um > h2{
