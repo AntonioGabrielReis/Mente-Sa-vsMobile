@@ -157,6 +157,11 @@ div#agendamento > div#um{
     border-radius: 4px 0px 0px 4px;
 }
 
+div#agendamento > div#um > h2{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
 div#um > h2{
     margin: 20px;
     font-size: 3.2vh;
@@ -238,6 +243,11 @@ div#agendamento5 > div#um{
     border-radius: 4px 0px 0px 4px;
 }
 
+div#agendamento5 > div#um > h2{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
 div#tres > img {
     height: 50px;
     border: 2px solid #148C54;
@@ -311,8 +321,8 @@ div#tres > img {
 
 @media screen and (max-width: 480px) {
     .specialty-box {
-        flex: 1 1 calc(100% - 40px);
-        height: 150px;
-        max-width: calc(100% - 40px);
+        flex: 1 1 calc(100% - 70px);
+        height: 200px;
+        max-width: calc(100% - 70px);
     }
 }
