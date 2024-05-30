@@ -264,7 +264,7 @@ div#tres > img {
 .specialty-box {
     flex: 1 1 calc(50% - 20px);
     max-width: calc(50% - 20px);
-    height: auto;
+    height: 80px;
     background-color: #148C54;
     color: rgb(255, 255, 255);
     text-align: center;
@@ -298,19 +298,21 @@ div#tres > img {
 /* Media Queries para telas menores */
 @media screen and (max-width: 768px) {
     .specialty-box {
-        flex: 1 1 calc(50% - 10px);
-        max-width: calc(50% - 10px);
+        flex: 1 1 calc(50% - 30px);
+        max-width: calc(50% - 30px);
+        height: 80px;
         font-size: 2vh;
     }
 
     .specialty-box > h3 {
-        font-size: 2.2vh;
+        font-size: 3.1vh;
     }
 }
 
 @media screen and (max-width: 480px) {
     .specialty-box {
-        flex: 1 1 calc(100% - 20px);
-        max-width: calc(100% - 20px);
+        flex: 1 1 calc(100% - 30px);
+        height: 80px;
+        max-width: calc(100% - 30px);
     }
 }
