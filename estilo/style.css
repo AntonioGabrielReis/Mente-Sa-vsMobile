@@ -74,11 +74,13 @@ div#imagem {
 
 #menu-button {
     right: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.956);
 }
 
 #agendamento-button {
     right: 20px;
     bottom: 90px; /* Ajuste para ficar acima do botão do menu */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.956);
 }
 
 #menu-button:hover, #agendamento-button:hover {
@@ -116,11 +118,14 @@ div#imagem {
     font-size: 18px;
     display: block;
     height: 40px;
-    width: 210px;
+    width: 180px;
     padding: 10px;
     background-color: #148C54;
     border-radius: 5px;
+    text-align: center;
 }
+
+
 
 #sidebar-menu ul li a:hover, #sidebar-agendamento button:hover {
     background-color: #24ae87;
@@ -361,7 +366,7 @@ div#tres > img {
     .specialty-box {
         flex: 1 1 calc(50% - 40px);
         max-width: calc(50% - 40px);
-        height: 150px;
+        height: 120px;
         font-size: 2vh;
     }
 
