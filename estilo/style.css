@@ -1,12 +1,12 @@
 @charset "UTF-8";
 
-*{
+* {
     padding: 0px;
     margin: 0px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/*Roda pé TOPO*/
+/* Roda pé TOPO */
 
 div#informacoes {
     background-color: #148C54;
@@ -24,7 +24,6 @@ div#informacoes > h4 {
     color: black;
     font-size: 2.3vw;
     margin-top: 15px;
-    
 }
 
 div#informacoes > h4#um {
@@ -33,79 +32,130 @@ div#informacoes > h4#um {
 
 /*-----------------------------------------------------------------*/
 
-/*Imagem inicial*/
+/* Imagem inicial */
 
-div#imagem{
+div#imagem {
     background: #166952 url(../imagens/ok.jpg) no-repeat top center;
     background-size: cover;
     height: 150px;
 }
 
-.hamburger{
-    width: 50px;
-    height: 25px;
-    position: relative;
-    margin: 10px auto;
-    transition: .5s ease-in-out;
-    cursor: pointer;
+.hamburger {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.hamburger span{
+.hamburger span {
     display: block;
+    width: 20px;
+    height: 2px;
+    background: #fff;
+}
+
+/* Botão flutuante */
+
+#menu-button, #agendamento-button {
+    position: fixed;
+    bottom: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #148C54;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+#menu-button {
+    right: 20px;
+}
+
+#agendamento-button {
+    right: 20px;
+    bottom: 90px; /* Ajuste para ficar acima do botão do menu */
+}
+
+#menu-button:hover, #agendamento-button:hover {
+    background-color: #24ae87;
+}
+
+#sidebar-menu, #sidebar-agendamento {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #166952;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: left 0.3s ease;
+    z-index: 999;
+}
+
+#sidebar-agendamento {
+    overflow: hidden; /* Para esconder os campos de agendamento quando o menu está fechado */
+}
+
+#sidebar-menu ul, #sidebar-agendamento form {
+    list-style-type: none;
+    padding: 20px;
+}
+
+#sidebar-menu ul li, #sidebar-agendamento div, #sidebar-agendamento form {
+    margin-bottom: 20px;
+}
+
+#sidebar-menu ul li a, #sidebar-agendamento button {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    display: block;
+    height: 40px;
+    width: 210px;
+    padding: 10px;
+    background-color: #148C54;
+    border-radius: 5px;
+}
+
+#sidebar-menu ul li a:hover, #sidebar-agendamento button:hover {
+    background-color: #24ae87;
+}
+
+.hidden {
+    display: none;
+}
+
+.visually-hidden {
     position: absolute;
-    height: 7px;
-    width: 90%;
-    background: #0d4c0f;
-    border-radius: 9px;
-    opacity: 1;
-    left: 0;
-    transform: rotate(0deg);
-    transition: .25s ease-in-out;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
 }
 
-.hamburger span:nth-child(1){
-    top: 0px;
-}
-
-.hamburger span:nth-child(2), .hamburger span:nth-child(3){
-    top: 10px;
-}
-
-.hamburger span:nth-child(4){
-    top: 20px;
-}
 /*-----------------------------------------------------------------*/
 
-/*Menu inicial*/
+/* Menu inicial */
 
-div#opcoes{
-     text-align: center;
-     background-color: #148C54;
-     padding: 5px;
-     border-radius: 0px 0px 8px 8px;
+div#opcoes {
+    text-align: center;
+    background-color: #148C54;
+    padding: 5px;
+    border-radius: 0px 0px 8px 8px;
 }
 
 div#opcoes > h1 {
     margin: 20px;
     text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.286);
     color: white;
-}
-
-
-i#select {
-    background-color: #166952;
-    display: block;
-    color: rgb(0, 0, 0);
-    text-align:center ;
-    padding: 1px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-i#select:hover{
-    background-color: #24ae87;
-    color: black;
-    
 }
 
 menu {
@@ -128,41 +178,40 @@ menu > ul > li > a {
     font-size: large;
 }
 
-menu > ul > li > a:hover{
+menu > ul > li > a:hover {
     background-color: #24ae87;
 }
 
 /*-----------------------------------------------------------------*/
 
-/*Primeira parte*/
+/* Primeira parte */
 
-
-div#agendamento{
+div#agendamento {
     margin-top: 20px;
     border: 0px solid black;
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
 }
 
-div#agendamento > div#um{
+div#agendamento > div#um {
     border: 2px solid #148C54;
     height: 60px;
     width: 257px;
     display: flex;
     justify-content: center; /* Centraliza horizontalmente */
-    align-items: center;    /* Centraliza verticalmente */
+    align-items: center; /* Centraliza verticalmente */
     background-color: #148C54;
     color: white;
     border-radius: 4px 0px 0px 4px;
 }
 
-div#agendamento > div#um > h2{
+div#agendamento > div#um > h2 {
     margin-top: 5px;
     margin-bottom: 5px;
 }
 
-div#um > h2{
+div#um > h2 {
     margin: 20px;
     font-size: 3.2vh;
 }
@@ -175,17 +224,17 @@ div#dois > img {
     border-radius: 0px 4px 4px 0px;
 }
 
-div#agendamento2{
-    align-items: center;   
-    justify-content: center; 
+div#agendamento2 {
+    align-items: center;
+    justify-content: center;
     display: inline-block;
     display: flex;
     margin-top: 10px;
 }
 
-div#agendamento3{
-    align-items: center;   
-    justify-content: center; 
+div#agendamento3 {
+    align-items: center;
+    justify-content: center;
     display: inline-block;
     display: flex;
     margin-top: 10px;
@@ -193,58 +242,58 @@ div#agendamento3{
 
 .inputAgenda {
     border: 0px solid black;
-    height: 30px;
-    width: 322px;
+    height: 40px;
+    width: 210px;
     border-radius: 4px;
+    margin-bottom:15px;
     padding-left: 10px;
-    box-sizing: border-box; 
+    box-sizing: border-box;
     background-color: rgb(195, 195, 195);
 }
 
-div#agendamento4{
-    align-items: center;   
-    justify-content: center; 
+div#agendamento4 {
+    align-items: center;
+    justify-content: center;
     display: inline-block;
     display: flex;
     margin-top: 10px;
     border-radius: 4px;
 }
 
-div#agendamento4 > div#um{
-    border: 2px  #148c54bb;
+div#agendamento4 > div#um {
+    border: 2px #148c54bb;
     height: 30px;
     width: 323px;
     background-color: #148c54bb;
     color: white;
     display: flex;
     justify-content: center; /* Centraliza horizontalmente */
-    align-items: center;    /* Centraliza verticalmente */
+    align-items: center; /* Centraliza verticalmente */
     border-radius: 4px;
 }
 
-div#agendamento5{
+div#agendamento5 {
     margin-top: 10px;
     border: 0px solid black;
     display: flex;
-    justify-content: center; 
-    align-items: center;   
+    justify-content: center;
+    align-items: center;
 }
 
-div#agendamento5 > div#um{
+div#agendamento5 > div#um {
     font-size: 2.5vh;
     border: 2px solid #148C54;
     height: 50px;
     width: 263px;
     display: flex;
     justify-content: center; /* Centraliza horizontalmente */
-    align-items: center;    /* Centraliza verticalmente */
+    align-items: center; /* Centraliza verticalmente */
     background-color: #148C54;
     color: white;
     border-radius: 4px 0px 0px 4px;
-    
 }
 
-div#agendamento5 > div#um > h2{
+div#agendamento5 > div#um > h2 {
     margin-top: 5px;
     margin-bottom: 5px;
 }
@@ -288,7 +337,7 @@ div#tres > img {
     position: relative;
 }
 
-.specialty-box > h3{
+.specialty-box > h3 {
     margin-bottom: 8px;
     text-decoration: underline;
     font-size: 2.8vh;
@@ -327,4 +376,21 @@ div#tres > img {
         height: 200px;
         max-width: calc(100% - 70px);
     }
+}
+
+/* Hidden when not expanded */
+.hidden {
+    display: none;
+}
+
+/* Visually hidden for accessibility */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
 }

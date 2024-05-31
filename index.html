@@ -6,14 +6,14 @@
     <title>Web-Mobile</title>
     <link rel="stylesheet" href="estilo/style.css">
     <link rel="stylesheet" href="estilo/loginmidias.css">
-    <link rel="shortcut icon" href="imagens/LOGOTIPO-branco.png" type="image/x-icon"> <!--Icone do link-->
+    <link rel="shortcut icon" href="imagens/LOGOTIPO-branco.png" type="image/x-icon">
 </head>
 <body>
     <header>
         <main>
             <div id="topo">
                 <div id="informacoes">
-                    <img src="imagens/LOGOTIPO.png" alt="">
+                    <img src="imagens/LOGOTIPO.png" alt="Logotipo da Clinica">
                     <h4 id="um">&#8226; COMO CHEGAR?</h4>
                     <h4>&#8226; FALE CONOSCO</h4>
                 </div>
@@ -21,85 +21,76 @@
             <div id="imagem"></div>
             <div id="opcoes">
                 <h1>Clinica Mente Sã</h1>
-                <i id="select" onclick="clickMenu()"><div class="hamburger closet">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div></i>
-                <menu id="itens">
-                    <ul>
-                        <li><a href="#">Quem somos?</a></li>
-                        <li><a href="#">unidade</a></li>
-                        <li><a href="#">Convênios</a></li>
-                        <li><a href="#">Especialidades</a></li>
-                    </ul>
-                </menu>
             </div>
 
-            <div id="agendamento">
-                <div id="um"><h2>Agende já seu horário</h2></div>
-                <div id="dois"><img src="imagens/calendario.png" alt=""></div>
-            </div>
-
-            <div id="agendamento2">
-                <input type="name" name="cadastroNome" id="cadastroNome" class="inputAgenda" placeholder="    Digite aqui seu nome" autocomplete="name" required maxlength="30">
-            </div>
-
-            <div id="agendamento3">
-                <input type="email" name="cadastroEmail" id="cadastroEmail" class="inputAgenda" placeholder="    Digite aqui seu E-mail" autocomplete="email" required maxlength="30">
-            </div>
-
-            <div id="agendamento4">
-                <div id="um">Agendar</div>
-            </div>
-
-            <div id="agendamento5">
-                <div id="um"><h2>Dirceu I: 3235 7788</h2></div>
-                <div id="tres"><img src="imagens/telefone.png" alt=""></div>
-            </div>
-
-            <!-- Especialidades -->
             <div class="specialties-options">
                 <div class="specialty-box">
                     <h3>Psicologia</h3>
                     <p>Psicologia estuda como as pessoas pensam, sentem e se comportam, visando melhorar o bem-estar e a qualidade de vida.</p>
-                    <img src="imagens/LOGOTIPO-branco.png" alt="Opção 3" class="option-image">
+                    <img src="imagens/LOGOTIPO-branco.png" alt="Psicologia" class="option-image">
                 </div>
                 <div class="specialty-box">
                     <h3>Fisioterapia</h3>
                     <p>Fisioterapia visa restaurar a funcionalidade física, melhorar a qualidade de vida e prevenir lesões e a orientação sobre hábitos saudáveis.</p>
-                    <img src="imagens/LOGOTIPO-branco.png" alt="Opção 3" class="option-image">
+                    <img src="imagens/LOGOTIPO-branco.png" alt="Fisioterapia" class="option-image">
                 </div>
                 <div class="specialty-box">
                     <h3>Fonoaudiologia</h3>
                     <p>Fonoaudiologia visa promover comunicação eficaz e melhorar a qualidade de vida de pessoas com dificuldades nessa área.</p>
-                    <img src="imagens/LOGOTIPO-branco.png" alt="Opção 3" class="option-image">
+                    <img src="imagens/LOGOTIPO-branco.png" alt="Fonoaudiologia" class="option-image">
                 </div>
                 <div class="specialty-box">
-                    <h3>Psicopedagogia</h3>
-                    <p>Psicopedagogia busca entender em dificuldades de aprendizagem, integrando Psicologia e Pedagogia para promover o sucesso educacional e pessoal.</p>
-                    <img src="imagens/LOGOTIPO-branco.png" alt="Opção 3" class="option-image">
+                    <h3>Psicopedagogia</h>
+                    <p>Psicopedagogia busca entender dificuldades de aprendizagem, integrando Psicologia e Pedagogia para promover o sucesso educacional e pessoal.</p>
+                    <img src="imagens/LOGOTIPO-branco.png" alt="Psicopedagogia" class="option-image">
                 </div>
             </div>
         </main>
     </header>
-    <script>
-        function clickMenu() {
-            const itens = document.getElementById('itens');
-            if (itens.style.display === 'block') {
-                itens.style.display = 'none';
-            } else {
-                itens.style.display = 'block';
-            }
-        }
 
-        (function clickMenu () {
-            const menu = document.querySelector('.hamburger');
-            menu.onclick = () => {
-                menu.classList.toggle('open');
-            }
-        })();
-    </script>
+    <div id="menu-button" aria-label="Menu" aria-expanded="false" onclick="toggleMenu()">
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    
+    <div id="sidebar-menu">
+        <ul>
+            <li><a href="#">Quem somos?</a></li>
+            <li><a href="#">Unidade</a></li>
+            <li><a href="#">Convênios</a></li>
+            <li><a href="#">Especialidades</a></li>
+        </ul>
+    </div>
+
+    <div id="agendamento-button" aria-label="Agendamento" aria-expanded="false" onclick="toggleAgendamento()">
+        <div class="calendar-icon">
+            📅
+        </div>
+    </div>
+
+    <div id="sidebar-agendamento">
+        <div id="agendamento">
+            <div id="um"><h2>Agende já seu horário</h2></div>
+            <div id="dois"><img src="imagens/calendario.png" alt="Calendário"></div>
+        </div>
+
+        <form id="agendamento2">
+            <label for="cadastroNome" class="visually-hidden">Nome</label>
+            <input type="text" name="cadastroNome" id="cadastroNome" class="inputAgenda" placeholder="Digite aqui seu nome" autocomplete="name" required maxlength="30">
+            <label for="cadastroEmail" class="visually-hidden">E-mail</label>
+            <input type="email" name="cadastroEmail" id="cadastroEmail" class="inputAgenda" placeholder="Digite aqui seu E-mail" autocomplete="email" required maxlength="30">
+            <button id="um" type="submit">Agendar</button>
+        </form>
+
+        <div id="agendamento5">
+            <div id="um"><h2>Dirceu I: 3235 7788</h2></div>
+            <div id="tres"><img src="imagens/telefone.png" alt="Telefone"></div>
+        </div>
+    </div>
+
+    <script src="scripts/main.js"></script>
 </body>
 </html>
